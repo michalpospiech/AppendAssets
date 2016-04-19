@@ -27,7 +27,8 @@ class AppendAssetsExtension extends CompilerExtension
 		return [
 			'cacheDir' => $container->parameters['tempDir'] . '/cache',
 			'filesMask' => ['assets/*.js', 'assets/*.css', 'assets/*.less'],
-			'searchDir' => __DIR__ . '/../../../'
+			'searchDir' => __DIR__ . '/../../../',
+			'cache' => true
 		];
 	}
 
@@ -44,7 +45,7 @@ class AppendAssetsExtension extends CompilerExtension
 		$builder->addDefinition($this->prefix('appendAssets'))
 			->setClass(AppendAssets::class)
 			->addSetup('setProductionMode', [$builder->parameters['productionMode']])
-			->addSetup('setCache', [new Cache($cacheStorage, 'appendAssets')])
+			->addSetup('setCache', [new Cache($cacheStorage, 'appendAssets'), $config['cache']])
 			->addSetup('searchFiles', [$config['filesMask'], $config['searchDir']]);
 	}
 
