@@ -1,0 +1,21 @@
+{
+  "name": "mpospiech/append-assets",
+  "description": "Append assets files to loaderFactory",
+  "keywords": ["loader", "assets files", "nette"],
+  "license": "MIT license",
+  "authors": [
+    {
+      "name": "Michal Pospiech",
+      "email": "michal@pospiech.cz"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "appendAssets": "src"
+    }
+  },
+  "require": {
+    "php": ">= 5.3.2",
+    "nette/nette": ">=2.2"
+  }
+}
