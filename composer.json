@@ -2,7 +2,7 @@
   "name": "mpospiech/append-assets",
   "description": "Append assets files to loaderFactory",
   "keywords": ["loader", "assets files", "nette"],
-  "license": "MIT license",
+  "license": ["GPL-2.0", "GPL-3.0"],
   "authors": [
     {
       "name": "Michal Pospiech",
