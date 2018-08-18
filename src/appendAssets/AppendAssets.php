@@ -9,11 +9,13 @@ namespace appendAssets;
 
 
 use Nette\Caching\Cache;
-use Nette\Object;
+use Nette\SmartObject;
 use Nette\Utils\Finder;
 
-class AppendAssets extends Object
+class AppendAssets
 {
+
+	use SmartObject;
 
 	/** @var Cache */
 	private $cache;
